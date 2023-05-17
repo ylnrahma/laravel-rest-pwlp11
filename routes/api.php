@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return response()->json($data);
 //});
 
-Route:: get('/hello', function() {
-    return "hello world";
-});
+//Route:: get('/hello', function() {
+//    return "hello world";
+//});
+
+Route::apiResource('/mahasiswa',MahasiswaController::class);
